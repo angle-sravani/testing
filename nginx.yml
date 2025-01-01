@@ -1,0 +1,9 @@
+---
+- name: Configure EC2 instance
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install packages
+      apt:
+        name: nginx
+        state: present
